@@ -39,7 +39,6 @@ impl<K: Ord, V> VecMap<K, V> {
     // }
     fn position(&self, key: &K) -> Option<usize> {
         let mut i = 0;
-        let res: Option<usize> = None;
         while i < self.len() {
             if self.keys[i] == *key { return Some(i) }
             i +=1;
