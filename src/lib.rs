@@ -93,7 +93,7 @@ impl <T: std::cmp::Ord + std::clone::Clone, V: std::clone::Clone> Trie<T, V> {
         }
         self.nodes[node_pos].val = val;
     }
-    pub fn get(&self, input: &Vec<T>) -> Option<&V> {
+    pub fn get(&self, input: &[T]) -> Option<&V> {
         let mut node_pos: usize = 0;
         for ele in input {
             match self.transition(node_pos, ele) {
